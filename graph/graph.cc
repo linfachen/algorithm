@@ -56,6 +56,20 @@ void BFS(graph &g,nodeptr &n){
 
 
 
+//深度优先搜索
+void DFS(graph &g,nodeptr &n){
+    n->color = BLOCAK;
+    std::cout<<"[id]="<<n->_id<<std::endl;
+    for(auto &nod:g[n->_id-1]){
+        if(nod->color==BLOCAK) continue;
+        DFS(g,nod);
+    }
+}
+
+
+
+
+
 int main(){
     make_node(1);
     make_node(2);
@@ -67,5 +81,5 @@ int main(){
 
     graph g = {{n1,n2,n5},{n2,n1,n5,n3,n4},{n3,n2,n4},{n4,n2,n5,n3},{n5,n4,n1,n2}};
     std::cout<<"hello world"<<std::endl;
-    BFS(g,n3);
+    DFS(g,n3);
 }
