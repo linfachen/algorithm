@@ -38,7 +38,6 @@ public:
 
 std::hash<int> hash_int;
 
-
 hash_table::hash_table(int n){
     _data = (int*)malloc(n*k*sizeof(int));
     _bucket = n*k;
@@ -89,3 +88,6 @@ int gcd(int x,int y){
 }
 
 ```
+
+##5.最大公倍数公式:
+$$[a,b] = a*b/gcd(a,b)$$
