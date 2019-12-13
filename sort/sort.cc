@@ -25,13 +25,17 @@ void check_result(int *array,int n){
 
 int main(){
     std::cout<<"******************sort test******************"<<std::endl;
-    int array_len = 2451253;
+    int array_len = 24512530;
     int * array = gen_data(array_len);
 
 //    for(int i=0;i<array_len;i++){
 //        std::cout<<*(array+i)<<std::endl;
 //    }
+    int start_time = clock();
     heap_sort(array,array_len);
+    int end_time = clock();
     check_result(array,array_len);
+
+    std::cout<<"all sort time is:"<<(end_time - start_time)*1.0/CLOCKS_PER_SEC<<std::endl;
     free(array);
 }

@@ -1,3 +1,4 @@
+#include <iostream>
 #include <utility>
 
 inline int left(int i){return 2*i+1;}
@@ -31,7 +32,7 @@ void build_min_heap(int *array,int n){
         max_heapify(array,i,n);
     }
 }
-#include <iostream>
+
 
 
 void heap_sort(int *array,int n){
