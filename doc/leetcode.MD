@@ -1,4 +1,6 @@
 #leetcode 笔记
+[toc]
+
 ##1.异或操作满足：
 1.结合律：
 $$a\bigoplus b \bigoplus c = a \bigoplus (b \bigoplus c)$$
